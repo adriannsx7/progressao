@@ -1,0 +1,101 @@
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+    int i = 1;
+    for (i = 1; i <= 5; i++) {
+      System.out.println(i);
+    }
+
+    System.out.println("________________________________________________");
+    
+    int idade = 18;
+    if (idade >= 18) {
+      System.out.println("Você é maior de idade");
+    } else {
+      System.out.println("Você é menor de idade");
+    }
+
+    System.out.println("________________________________________________");
+
+    int diaSemana = 8;
+    switch (diaSemana) {
+      case 1:
+        System.out.println("Domingo");
+        break;
+      case 2:
+        System.out.println("Segunda-feira");
+        break;
+      case 3:
+        System.out.println("Terça-feira");
+        break;
+      case 4:
+        System.out.println("Quarta-feira");
+        break;
+      case 5:
+        System.out.println("Quinta-feira");
+        break;
+      case 6: 
+        System.out.println("Sexta-feira");
+        break;
+      case 7:
+        System.out.println("Sábado");
+        break;
+      default:
+        System.out.println("Este dia não existe");
+    }
+    
+    System.out.println("________________________________________________");
+
+    for (int a = 1; a <= 5; a++) {
+        for (int b = 1; b <= a; b++) {
+            System.out.print(b);
+        }
+        System.out.println();
+    }
+
+    System.out.println("________________________________________________");
+
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    String d = "3";
+    boolean e = true;
+    boolean f = false;
+
+    System.out.println("a+b**c-c%2 = " + (a+b*c-c%2));
+    System.out.println("b(c/a-a) = "  + (b * (c / a - a)));
+    System.out.println("(c== d) != e = " + ((c == Integer.parseInt(d)) != e));
+    System.out.println("(b>= a) == f = " + ((b >= a) == f));
+    System.out.println("(c == d) && (b %1== 0) = " + ((c == Integer.parseInt(d)) && (b % 1 == 0)));
+    System.out.println("e || (b>c || f = )" + (e || (b > c || f)));
+
+    System.out.println("________________________________________________");
+
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Digite a sua altura: ");
+    double altura = scanner.nextDouble();
+
+    System.out.println("Digite o seu peso: ");
+    double peso = scanner.nextDouble();
+
+    double imc = peso / (altura * altura);
+    System.out.println("Seu IMC é: " + imc);
+
+    if (imc < 17) {
+      System.out.println("muito abaixo do peso");
+    } else if (imc >= 17 && imc < 18.5) {
+      System.out.println("abaixo do peso");
+    } else if (imc >= 18.5 && imc < 25) {
+      System.out.println("peso normal");
+    } else if (imc >= 25 && imc < 30) {
+      System.out.println("acima do peso");
+    } else if (imc >= 30 && imc < 35) {
+      System.out.println("obesidade I");
+    } else if (imc >= 35) {
+      System.out.println("obesidade II");
+    }
+  }
+}
