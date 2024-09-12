@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+  public static double main(double capitalInicial, double taxaJuros, int tempoMeses) {
+
+    double taxaDecimal = taxaJuros / 100;
+
+    double montante = capitalInicial;
+    for (int i = 1; i <= tempoMeses; i++) {
+      montante *= (1 + taxaDecimal);
+    }
+    return montante;
+  }
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Digite o valor do capital inicial: ");
+    double capitalInicial = scanner.nextDouble();
+    System.out.println("Digite a taxa de juros: ");
+    double taxaJuros = scanner.nextDouble();
+    System.out.println("Digite o tempo do investimento em meses: ");
+    int tempoMeses = scanner.nextInt();
+
+    double montanteFinal = main(capitalInicial, taxaJuros, tempoMeses);
+    System.out.println("O montante final do investimento é: " + montanteFinal);
+  }
+}
